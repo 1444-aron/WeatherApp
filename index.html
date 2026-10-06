@@ -3,31 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Weather</title>
 </head>
 <body>
     <div class="content">
-        <select name="cities" id="cities" onchange="weather()" aria-placeholder="Válaszzon">
+        <label for="cities">Select a city:</label>
+        <select name="cities" id="cities" onchange="weather()" >
+            <option value="" disabled selected hidden>Select your option</option>
             <option value="Budapest">Budapest</option>
             <option value="London">London</option>
-            <option value="Paris">Párizs</option>
+            <option value="Paris">Paris</option>
         </select>
+        <p id="weather">Loading weather data...</p>
+        <p id="text">hello</p>
+        <img id="img" src="" alt="" sizes="64px" height="64px">
     </div>
-    <p id="weather">Loading weather data...</p>
-    <script>
-        var city = document.getElementById("cities")
-
-        function weather()
-        {
-            var apiUrl = `http://api.weatherapi.com/v1/current.json?key=6d81843e15824bc9a23160939260610&q=${city.options[city.selectedIndex].value}&aqi=no`;
-            fetch(apiUrl)
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('weather').innerText = `The current temperature in ${data.location.name} is ${data.current.temp_c}°C`;
-                })
-                .catch(error => console.error('Error:', error));
-        }
-        
-    </script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
