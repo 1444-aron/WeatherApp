@@ -12,12 +12,49 @@
         <select name="cities" id="cities" onchange="weather()" >
             <option value="" disabled selected hidden>Select your option</option>
             <option value="Budapest">Budapest</option>
+            <option value="Szeged">Szeged</option>
             <option value="London">London</option>
             <option value="Paris">Paris</option>
         </select>
-        <p id="weather">Loading weather data...</p>
-        <p id="text">hello</p>
-        <img id="img" src="" alt="" sizes="64px" height="64px">
+        <div class="main">
+            <p id="city">Loading weather data...</p>
+            <p id="weather"></p>
+            <div class="sidebyside"><p id="text"></p> <img id="img" src="" alt="" sizes="64px" height="64px"></div>
+        </div>
+        <div class="box2">
+            <table>
+                <tr>
+                    <td>Temperature feels like:</td>
+                    <td><span id="feelslike_c"></span></td>
+                </tr>
+                <tr>
+                    <td>Pressure</td>
+                    <td><span id="pressure_mb"></span></td>
+                </tr>
+                <tr>
+                    <td>Humidity:</td>
+                    <td><span id="humidity"></span></td>
+                </tr>
+                <tr>
+                    <td>UV:</td>
+                    <td><span id="uv"></span></td>
+                </tr>
+                <tr>
+                    <td>Wind Speed:</td>
+                    <td><span id="wind_kph"></span></td>
+                </tr>
+                <tr>
+                    <td>Wind driceton:</td>
+                    <td><span id="wind_degree"></span></td>
+                </tr>
+                <tr>
+                    <td>Chances of rain:</td>
+                    <td><span id="chance_of_rain"></span></td>
+                </tr>
+            </table>            
+        </div>
+        <div class="box2"><p id="last_updated"></p></div>
+        
     </div>
     
     <script src="script.js"></script>
