@@ -1,9 +1,83 @@
 body
 {
     background-color: burlywood;
+    background: linear-gradient(to right, burlywood, burlywood, #00000000), url(image_proxy.webp);
+    height: 100dvh;
+    overflow-y: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
 }
 
 .content
 {
-    background-color: aliceblue;
+    width: 40%;
+}
+
+p, table td
+{
+    font-size: 30px;
+}
+
+label
+{
+    margin-left: 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+select
+{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.main, .box2
+{
+    margin-left: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    width: fit-content;
+    width: 100%;
+    margin-bottom: 15px;
+    p
+    {
+        margin: 0;
+    }
+    #weather
+    {
+        font-size: 70px;
+        font-weight: bold;
+        margin: 0;
+    }
+    .sidebyside
+    {
+        display: flex; align-items: center;
+
+        img 
+        {
+            margin-left: 15px;
+        }
+    }
+}
+
+#last_updated
+{
+    font-size: 20px;
+}
+
+@media (max-width: 1200px) {
+    .content
+    {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .content
+    {
+        width: calc(100% - 40px);
+    }
 }
