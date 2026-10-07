@@ -27,6 +27,17 @@ label
     font-size: 20px;
 }
 
+input
+{
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-bottom: 15px;
+    right: 0;
+}
+
 select
 {
     font-size: 20px;
